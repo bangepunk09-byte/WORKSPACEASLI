@@ -6,12 +6,13 @@
   :root {
     --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --ui-radius: 24px;
-    --primary-color: #0f172a;
-    --accent-color: #dc2626;
+    --primary-color: #1e3a8a; /* Navy */
+    --accent-color: #dc2626;  /* Bright Red */
+    --bg-color: #ffffff;      /* White Base */
     --chat-bubble-bg: #dc2626;
     --chat-bubble-text: #ffffff;
-    --btn-hover-color: #1e293b;
-    --selector-active-color: #0f172a;
+    --btn-hover-color: #991b1b;
+    --selector-active-color: #1e3a8a;
     --icon-accent-color: #dc2626;
   }
   

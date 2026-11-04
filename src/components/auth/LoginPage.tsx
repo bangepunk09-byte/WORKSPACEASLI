@@ -1108,6 +1108,44 @@ export const LoginPage: React.FC = () => {
                   </div>
                 </div>
 
+                {/* Password Fields */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-800 dark:text-slate-200 mb-1">Password *</label>
+                    <div className="relative">
+                      <Lock className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
+                      <input
+                        type={showSignupPassword ? 'text' : 'password'}
+                        required
+                        value={signupPassword}
+                        onChange={e => setSignupPassword(e.target.value)}
+                        placeholder="Min. 8 karakter"
+                        className={`w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 pl-9 pr-9 py-2 text-xs font-medium ${cardRadiusClass}`}
+                      />
+                      <button type="button" onClick={() => setShowSignupPassword(!showSignupPassword)} className="absolute right-2.5 top-2.5 text-slate-400 hover:text-slate-600 cursor-pointer">
+                        {showSignupPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-800 dark:text-slate-200 mb-1">Konfirmasi Password *</label>
+                    <div className="relative">
+                      <Lock className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
+                      <input
+                        type={showConfirmPassword ? 'text' : 'password'}
+                        required
+                        value={signupConfirmPassword}
+                        onChange={e => setSignupConfirmPassword(e.target.value)}
+                        placeholder="Ulangi password"
+                        className={`w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 pl-9 pr-9 py-2 text-xs font-medium ${cardRadiusClass}`}
+                      />
+                      <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="absolute right-2.5 top-2.5 text-slate-400 hover:text-slate-600 cursor-pointer">
+                        {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
                 {/* 13: Informasi Rekening Gaji */}
                 <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-3.5 dark:border-slate-800 dark:bg-slate-800/40 space-y-2">
                   <label className="block text-xs font-bold text-slate-800 dark:text-slate-200">

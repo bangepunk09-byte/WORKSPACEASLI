@@ -26,7 +26,9 @@ export type OverviewWidgetKey =
   | 'showProductivityTrends'
   | 'showWellnessSection'
   | 'showMemberWorkload'
-  | 'showDocumentsSection';
+  | 'showDocumentsSection'
+  | 'showWeather'
+  | 'showPerformanceStats';
 
 export interface OverviewWidgetConfig {
   showHeroGreeting: boolean;
@@ -37,6 +39,8 @@ export interface OverviewWidgetConfig {
   showProductivityTrends: boolean;
   showWellnessSection: boolean;
   showDocumentsSection: boolean;
+  showWeather: boolean;
+  showPerformanceStats: boolean;
   widgetOrder: OverviewWidgetKey[];
   // Backwards compatibility
   sectionOrder?: any[];
@@ -44,12 +48,14 @@ export interface OverviewWidgetConfig {
 
 export const DEFAULT_WIDGET_ORDER: OverviewWidgetKey[] = [
   'showHeroGreeting',
+  'showWeather',
+  'showPerformanceStats',
   'showMeetingSchedule',
   'showPriorityTasks',
   'showTeamDiscussion',
   'showProductivityTrends',
   'showWellnessSection',
-  'showMemberWorkload', // Default: Placed BELOW Performa & Beban Kerja Tim
+  'showMemberWorkload', 
   'showDocumentsSection'
 ];
 
@@ -62,7 +68,9 @@ export const normalizeWidgetOrder = (order?: any): OverviewWidgetKey[] => {
     'showProductivityTrends',
     'showWellnessSection',
     'showMemberWorkload',
-    'showDocumentsSection'
+    'showDocumentsSection',
+    'showWeather',
+    'showPerformanceStats'
   ];
 
   if (!order || !Array.isArray(order)) return DEFAULT_WIDGET_ORDER;
@@ -87,6 +95,8 @@ export const DEFAULT_OVERVIEW_CONFIG: OverviewWidgetConfig = {
   showWellnessSection: true,
   showMemberWorkload: true,
   showDocumentsSection: true,
+  showWeather: true,
+  showPerformanceStats: true,
   widgetOrder: DEFAULT_WIDGET_ORDER
 };
 
@@ -147,6 +157,18 @@ export const WIDGET_DEFINITIONS: Record<OverviewWidgetKey, WidgetDefinition> = {
     label: 'Dokumen & SOP Perusahaan',
     desc: 'Akses cepat ke panduan kerja resmi dan repositori berkas penting.',
     icon: <FileText className="h-4 w-4 text-sky-600" />
+  },
+  showWeather: {
+    key: 'showWeather',
+    label: 'Cuaca Hari Ini',
+    desc: 'Menampilkan kondisi cuaca terkini berdasarkan lokasi perusahaan.',
+    icon: <Sparkles className="h-4 w-4 text-sky-500" /> // Use appropriate icon
+  },
+  showPerformanceStats: {
+    key: 'showPerformanceStats',
+    label: 'Statistik Performa Pribadi',
+    desc: 'Ringkasan performa tugas dan pencapaian Anda.',
+    icon: <TrendingUp className="h-4 w-4 text-emerald-500" />
   }
 };
 

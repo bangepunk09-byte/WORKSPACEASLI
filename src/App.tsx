@@ -21,8 +21,8 @@ import { BrandDriveDirectory } from './components/drive/BrandDriveDirectory';
 import { EmployeeDirectory } from './components/directory/EmployeeDirectory';
 import { AdminCustomization } from './components/admin/AdminCustomization';
 import { HuddleRoom } from './components/common/HuddleRoom';
-import { CreateTaskModal } from './components/modals/CreateTaskModal';
-import { CreateMeetingModal } from './components/modals/CreateMeetingModal';
+import { NewDashboard } from './components/dashboard/NewDashboard';
+import { NewSidebar } from './components/layout/NewSidebar';
 import { UploadDocModal } from './components/modals/UploadDocModal';
 import { LeaveRequestModal } from './components/modals/LeaveRequestModal';
 import { QuickSearchModal } from './components/modals/QuickSearchModal';
@@ -86,7 +86,7 @@ const MainLayout: React.FC = () => {
   const renderActiveView = () => {
     switch (activeTab) {
       case 'dashboard':
-        return <HomeDashboard />;
+        return <NewDashboard />;
       case 'feed':
         return <SocialFeed />;
       case 'chat':
@@ -123,11 +123,8 @@ const MainLayout: React.FC = () => {
           : undefined
       }
     >
-      {/* Desktop & Mobile Responsive Sidebar */}
-      <Sidebar
-        isMobileOpen={isMobileMenuOpen}
-        onCloseMobile={() => setIsMobileMenuOpen(false)}
-      />
+      {/* New Sidebar */}
+      <NewSidebar />
 
       {/* Main Content Area */}
       <div className="flex flex-1 flex-col overflow-hidden">
