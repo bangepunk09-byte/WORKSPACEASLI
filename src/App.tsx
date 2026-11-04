@@ -23,6 +23,8 @@ import { AdminCustomization } from './components/admin/AdminCustomization';
 import { HuddleRoom } from './components/common/HuddleRoom';
 import { NewDashboard } from './components/dashboard/NewDashboard';
 import { NewSidebar } from './components/layout/NewSidebar';
+import { CreateTaskModal } from './components/modals/CreateTaskModal';
+import { CreateMeetingModal } from './components/modals/CreateMeetingModal';
 import { UploadDocModal } from './components/modals/UploadDocModal';
 import { LeaveRequestModal } from './components/modals/LeaveRequestModal';
 import { QuickSearchModal } from './components/modals/QuickSearchModal';

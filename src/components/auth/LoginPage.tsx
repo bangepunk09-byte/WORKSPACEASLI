@@ -577,25 +577,25 @@ export const LoginPage: React.FC = () => {
 
           {/* Bottom 3 Feature Cards */}
           <div className="relative z-10 grid grid-cols-3 gap-3 pt-3">
-            <div className={`bg-white/90 backdrop-blur-md p-3.5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
-              <div className={`flex h-7 w-7 items-center justify-center bg-red-50 text-red-600 mb-2 ${cardRadiusClass}`}>
-                <MessageSquare className="h-4 w-4" />
+            <div className={`bg-white/90 backdrop-blur-md p-5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
+              <div className={`flex h-9 w-9 items-center justify-center bg-red-50 text-red-600 mb-3 ${cardRadiusClass}`}>
+                <MessageSquare className="h-5 w-5" />
               </div>
-              <span className="text-xs font-bold text-slate-900 leading-snug">Chat & calls</span>
+              <span className="text-sm font-bold text-slate-900 leading-snug">Chat & calls</span>
             </div>
 
-            <div className={`bg-white/90 backdrop-blur-md p-3.5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
-              <div className={`flex h-7 w-7 items-center justify-center bg-red-50 text-red-600 mb-2 ${cardRadiusClass}`}>
-                <CheckSquare className="h-4 w-4" />
+            <div className={`bg-white/90 backdrop-blur-md p-5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
+              <div className={`flex h-9 w-9 items-center justify-center bg-red-50 text-red-600 mb-3 ${cardRadiusClass}`}>
+                <CheckSquare className="h-5 w-5" />
               </div>
-              <span className="text-xs font-bold text-slate-900 leading-snug">Tasks & projects</span>
+              <span className="text-sm font-bold text-slate-900 leading-snug">Tasks & projects</span>
             </div>
 
-            <div className={`bg-white/90 backdrop-blur-md p-3.5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
-              <div className={`flex h-7 w-7 items-center justify-center bg-red-50 text-red-600 mb-2 ${cardRadiusClass}`}>
-                <Users className="h-4 w-4" />
+            <div className={`bg-white/90 backdrop-blur-md p-5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
+              <div className={`flex h-9 w-9 items-center justify-center bg-red-50 text-red-600 mb-3 ${cardRadiusClass}`}>
+                <Users className="h-5 w-5" />
               </div>
-              <span className="text-xs font-bold text-slate-900 leading-snug">People & org</span>
+              <span className="text-sm font-bold text-slate-900 leading-snug">People & org</span>
             </div>
           </div>
         </div>
