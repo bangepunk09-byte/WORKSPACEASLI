@@ -317,12 +317,12 @@ export const WorkspaceProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       }
     } catch {}
     const base = loadFromStorage('themeSettings', {
-      accentColor: 'royal-blue' as const,
+      accentColor: 'navy-crimson' as const,
       sidebarCollapsed: false,
       density: 'comfortable' as const,
       cardRadius: 'smooth' as const,
       bgPattern: 'clean' as const,
-      customPrimaryColor: '#1e3a8a',
+      customPrimaryColor: '#0f172a',
       customAccentColor: '#dc2626'
     });
     return {

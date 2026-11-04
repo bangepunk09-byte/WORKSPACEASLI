@@ -30,9 +30,6 @@ import {
 import { useWorkspace } from '../../context/WorkspaceContext';
 import { ProductivityTrendsChart } from './ProductivityTrendsChart';
 import { MemberWorkloadStats } from './MemberWorkloadStats';
-import { WeatherWidget } from './WeatherWidget';
-import { PerformanceStatsWidget } from './PerformanceStatsWidget';
-
 import {
   CustomizeOverviewModal,
   OverviewWidgetConfig,
@@ -882,28 +879,6 @@ export const HomeDashboard: React.FC = () => {
     );
   };
 
-  // 9. Cuaca Hari Ini
-  const renderWeatherWidget = (index: number) => {
-    if (!overviewConfig.showWeather) return null;
-    return (
-      <div key="showWeather" className="col-span-12 md:col-span-6 lg:col-span-4 relative animate-in fade-in duration-300">
-        {renderWidgetToolbar('showWeather', index, 'Cuaca Hari Ini')}
-        <WeatherWidget />
-      </div>
-    );
-  };
-
-  // 10. Statistik Performa Pribadi
-  const renderPerformanceStatsWidget = (index: number) => {
-    if (!overviewConfig.showPerformanceStats) return null;
-    return (
-      <div key="showPerformanceStats" className="col-span-12 md:col-span-6 lg:col-span-4 relative animate-in fade-in duration-300">
-        {renderWidgetToolbar('showPerformanceStats', index, 'Statistik Performa Pribadi')}
-        <PerformanceStatsWidget />
-      </div>
-    );
-  };
-
   // Dispatcher for each widget key
   const renderWidgetByKey = (key: OverviewWidgetKey, index: number) => {
     switch (key) {
@@ -923,10 +898,6 @@ export const HomeDashboard: React.FC = () => {
         return renderMemberWorkload(index);
       case 'showDocumentsSection':
         return renderDocumentsSection(index);
-      case 'showWeather':
-        return renderWeatherWidget(index);
-      case 'showPerformanceStats':
-        return renderPerformanceStatsWidget(index);
       default:
         return null;
     }
