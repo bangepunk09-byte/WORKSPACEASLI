@@ -577,25 +577,25 @@ export const LoginPage: React.FC = () => {
 
           {/* Bottom 3 Feature Cards */}
           <div className="relative z-10 grid grid-cols-3 gap-3 pt-3">
-            <div className={`bg-white/90 backdrop-blur-md p-5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
-              <div className={`flex h-9 w-9 items-center justify-center bg-red-50 text-red-600 mb-3 ${cardRadiusClass}`}>
-                <MessageSquare className="h-5 w-5" />
+            <div className={`bg-white/90 backdrop-blur-md p-3.5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
+              <div className={`flex h-7 w-7 items-center justify-center bg-red-50 text-red-600 mb-2 ${cardRadiusClass}`}>
+                <MessageSquare className="h-4 w-4" />
               </div>
-              <span className="text-sm font-bold text-slate-900 leading-snug">Chat & calls</span>
+              <span className="text-xs font-bold text-slate-900 leading-snug">Chat & calls</span>
             </div>
 
-            <div className={`bg-white/90 backdrop-blur-md p-5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
-              <div className={`flex h-9 w-9 items-center justify-center bg-red-50 text-red-600 mb-3 ${cardRadiusClass}`}>
-                <CheckSquare className="h-5 w-5" />
+            <div className={`bg-white/90 backdrop-blur-md p-3.5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
+              <div className={`flex h-7 w-7 items-center justify-center bg-red-50 text-red-600 mb-2 ${cardRadiusClass}`}>
+                <CheckSquare className="h-4 w-4" />
               </div>
-              <span className="text-sm font-bold text-slate-900 leading-snug">Tasks & projects</span>
+              <span className="text-xs font-bold text-slate-900 leading-snug">Tasks & projects</span>
             </div>
 
-            <div className={`bg-white/90 backdrop-blur-md p-5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
-              <div className={`flex h-9 w-9 items-center justify-center bg-red-50 text-red-600 mb-3 ${cardRadiusClass}`}>
-                <Users className="h-5 w-5" />
+            <div className={`bg-white/90 backdrop-blur-md p-3.5 text-slate-900 shadow-lg flex flex-col justify-between ${cardRadiusClass}`}>
+              <div className={`flex h-7 w-7 items-center justify-center bg-red-50 text-red-600 mb-2 ${cardRadiusClass}`}>
+                <Users className="h-4 w-4" />
               </div>
-              <span className="text-sm font-bold text-slate-900 leading-snug">People & org</span>
+              <span className="text-xs font-bold text-slate-900 leading-snug">People & org</span>
             </div>
           </div>
         </div>
@@ -1108,64 +1108,72 @@ export const LoginPage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Password Fields */}
+                {/* PASSWORD SECTION */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 dark:text-slate-200 mb-1">Password *</label>
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      Password *
+                    </label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
+                      <Lock className="absolute left-3.5 top-3 h-4 w-4 text-slate-400" />
                       <input
                         type={showSignupPassword ? 'text' : 'password'}
                         required
                         value={signupPassword}
                         onChange={e => setSignupPassword(e.target.value)}
-                        placeholder="Min. 8 karakter"
-                        className={`w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 pl-9 pr-9 py-2 text-xs font-medium ${cardRadiusClass}`}
+                        placeholder="Minimal 8 karakter"
+                        className={`w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 pl-10 pr-9 py-2.5 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${cardRadiusClass}`}
                       />
-                      <button type="button" onClick={() => setShowSignupPassword(!showSignupPassword)} className="absolute right-2.5 top-2.5 text-slate-400 hover:text-slate-600 cursor-pointer">
+                      <button
+                        type="button"
+                        onClick={() => setShowSignupPassword(!showSignupPassword)}
+                        className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
+                      >
                         {showSignupPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                       </button>
                     </div>
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 dark:text-slate-200 mb-1">Konfirmasi Password *</label>
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      Konfirmasi Password *
+                    </label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
+                      <Lock className="absolute left-3.5 top-3 h-4 w-4 text-slate-400" />
                       <input
                         type={showConfirmPassword ? 'text' : 'password'}
                         required
                         value={signupConfirmPassword}
                         onChange={e => setSignupConfirmPassword(e.target.value)}
                         placeholder="Ulangi password"
-                        className={`w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 pl-9 pr-9 py-2 text-xs font-medium ${cardRadiusClass}`}
+                        className={`w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 pl-10 pr-9 py-2.5 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${cardRadiusClass}`}
                       />
-                      <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="absolute right-2.5 top-2.5 text-slate-400 hover:text-slate-600 cursor-pointer">
+                      <button
+                        type="button"
+                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                        className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
+                      >
                         {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                       </button>
                     </div>
                   </div>
                 </div>
 
-                {/* 13: Informasi Rekening Gaji */}
-                <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-3.5 dark:border-slate-800 dark:bg-slate-800/40 space-y-2">
-                  <label className="block text-xs font-bold text-slate-800 dark:text-slate-200">
-                    Informasi Rekening Gaji
-                  </label>
-                  <input
-                    type="text"
-                    value={inputBankInfo}
-                    onChange={e => setInputBankInfo(e.target.value)}
-                    placeholder="Nama Bank, Nomor Rekening, Pemilik cth: BCA 5270189234"
-                    className={`w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 px-3 py-2 text-xs font-medium ${cardRadiusClass}`}
-                  />
-                </div>
+                {/* Password Strength Indicator */}
+                {signupPassword && (
+                  <div className="space-y-1">
+                    <div className={`h-1.5 w-full rounded-full ${getPasswordStrength(signupPassword).color}`} />
+                    <div className="text-[10px] font-bold text-slate-500">
+                      Kekuatan: <span className="text-slate-900 dark:text-white">{getPasswordStrength(signupPassword).label}</span>
+                    </div>
+                  </div>
+                )}
 
                 {/* Submit Button */}
                 <div className="pt-2 shrink-0">
                   <button
                     type="submit"
-                    disabled={isGoogleLoading || !inputGoogleEmail.trim() || !inputGoogleName.trim() || !inputGooglePosition.trim()}
-                    className={`w-full py-3.5 text-xs font-extrabold shadow-md transition cursor-pointer ${accentButtonClass} ${cardRadiusClass}`}
+                    disabled={isGoogleLoading || !inputGoogleEmail.trim() || !inputGoogleName.trim() || !inputGooglePosition.trim() || signupPassword.length < 8 || signupPassword !== signupConfirmPassword}
+                    className={`w-full py-3.5 text-xs font-extrabold shadow-md transition cursor-pointer ${accentButtonClass} ${cardRadiusClass} disabled:opacity-50`}
                   >
                     {isGoogleLoading ? 'Memproses Registrasi Karyawan...' : 'Daftar Karyawan Baru & Masuk'}
                   </button>
